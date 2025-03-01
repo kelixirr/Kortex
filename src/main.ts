@@ -17,7 +17,7 @@ const mobileMenu: HTMLElement | null = document.querySelector(".m-header");
 const hero: HTMLElement | null = document.querySelector(".hero");
 const rocket: HTMLElement | null = document.querySelector(".rocket");
 
-// Steps   
+// Steps
 
 const handleClick = (e: Event) => {
   const clickedStep = e.target as HTMLLIElement;
@@ -33,8 +33,7 @@ steps.forEach((step) => {
   step.addEventListener("click", handleClick);
 });
 
-
-// Slider 
+// Slider
 
 let slideLen = parseInt(getComputedStyle(slide!).width, 10);
 let direction = 1;
@@ -42,25 +41,26 @@ let counter = 0;
 
 nextBtn?.addEventListener("click", () => {
   if (slide) {
-    if(counter === 0 && direction === -1){
-       direction = 1;
+    if (counter === 0 && direction === -1) {
+      direction = 1;
     }
-     counter += direction;
-    if(counter >= 3) {
+    counter += direction;
+    if (counter >= 3 && innerWidth > 768) {
+      direction = -1;
+    }
+    if (counter >= 4 && innerWidth < 768) {
       direction = -1;
     }
     slide.style.transform = `translateX(-${counter * slideLen}px)`;
   }
 });
 
-
-
 // Feature Div background
 
 const handleMouseMove = (e: MouseEvent) => {
-  if(!(e.target instanceof HTMLElement)) return;
+  if (!(e.target instanceof HTMLElement)) return;
   const target = e.target.closest(".feature-grid-detail") as HTMLElement;
-  if(!target) return;
+  if (!target) return;
   const rect = target.getBoundingClientRect();
   const x = e.clientX - rect.x;
   const y = e.clientY - rect.y;
@@ -71,7 +71,7 @@ const handleMouseLeave = (e: MouseEvent) => {
   if (!(e.target instanceof HTMLElement)) return;
   const target = e.target.closest(".feature-grid-detail") as HTMLElement;
   if (!target) return;
-  
+
   if (
     e.relatedTarget instanceof HTMLElement &&
     target.contains(e.relatedTarget)
@@ -84,26 +84,24 @@ const handleMouseLeave = (e: MouseEvent) => {
 featureGrid?.addEventListener("mousemove", handleMouseMove);
 featureGrid?.addEventListener("mouseout", handleMouseLeave);
 
-
-
 // handling Mobile menu
 
 openMenu?.addEventListener("click", () => {
   mobileMenu?.classList.add("show");
-})
+});
 
 closeMenu?.addEventListener("click", () => {
-   mobileMenu?.classList.remove("show");
+  mobileMenu?.classList.remove("show");
 });
 
 document.addEventListener("click", (e) => {
   const target = e.target as HTMLElement;
-  if(!mobileMenu?.contains(target) && target !== openMenu){
+  if (!mobileMenu?.contains(target) && target !== openMenu) {
     mobileMenu?.classList.remove("show");
   }
-})
+});
 
 // Hero rocket
 rocket?.addEventListener("click", () => {
-  hero?.scrollIntoView({behavior: "smooth"})
-})
+  hero?.scrollIntoView({ behavior: "smooth" });
+});
