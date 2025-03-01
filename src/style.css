@@ -334,16 +334,15 @@ a:hover {
   width: 600px;
   max-width: 100%;
   margin: auto;
-  border-radius: 0.3rem;
-}
-
-.hero-video video {
-  display: block;
-  width: 100%;
-  height: auto;
+  overflow: hidden;
   border: 2.4px solid #B38728;
   box-shadow: 2px 2px 100px rgba(252, 246, 186, 0.288);
   border-radius: 1.6rem;
+}
+
+.hero-video iframe {
+  width: 100%;
+  height: 338px;
 }
 
 
@@ -380,6 +379,11 @@ a:hover {
   .hero-video {
     width: 100%;
     align-self: center;
+    margin-top: 2.4rem;
+  }
+  .hero-video iframe {
+      width: 100%;
+      height: 480px;
   }
 }
 
@@ -403,6 +407,11 @@ a:hover {
     max-width: 100%;
     font-size: 5.2rem;
   }
+
+    .hero-video iframe {
+      width: 100%;
+      height: 338px;
+    }
 }
 
 
