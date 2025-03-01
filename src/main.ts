@@ -46,7 +46,7 @@ nextBtn?.addEventListener("click", () => {
        direction = 1;
     }
      counter += direction;
-    if(counter >= 2) {
+    if(counter >= 3) {
       direction = -1;
     }
     slide.style.transform = `translateX(-${counter * slideLen}px)`;
