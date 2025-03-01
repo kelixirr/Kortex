@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Cantarell";
+  src: url("../cantarell/Cantarell-Regular.ttf") format("truetype"),
+    url("../cantarell/Cantarell-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cantarell";
+  src: url("../cantarell/Cantarell-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 
 /* #BF953F  #FCF6BA  #B38728  #FBF5B7  #AA771C*/
 
@@ -15,21 +31,12 @@ html {
 }
 
 body {
-  font-family: "Cantarell", sans-serif;
+  font-family: "Cantarell";
   line-height: 1.5;
   font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: rgba(254, 251, 227, 0.68);
   background-color: #0c0c0c;
-}
-
-@media (max-width: 768px) {
-  body {
-    font-family: "Cantarell", sans-serif !important;
-  }
+  font-style: normal;
 }
 
 .rocket {
@@ -473,7 +480,7 @@ a:hover {
 }
 
 .steps-menu-li {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.2rem 2rem;
   color: #cac595;
   cursor: pointer;
