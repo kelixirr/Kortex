@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;&display=swap');
 
 /* #BF953F  #FCF6BA  #B38728  #FBF5B7  #AA771C*/
 
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Cantarell", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -555,7 +555,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  margin-bottom: 9.6rem;
+  margin-bottom: 16rem;
 }
 
 .slider-container {
@@ -707,7 +707,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 9.6rem;
+  margin-bottom: 16rem;
 }
 
 .features-container {
@@ -813,7 +813,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 9.6rem;
   overflow-x: hidden;
 }
 
@@ -847,7 +847,7 @@ a:hover {
   gap: 1.8rem;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8rem;
+  margin-bottom: 9.6rem;
 }
 
 .reviews-users h3 {
@@ -879,6 +879,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 4.8rem;
 }
 
 .reviews-cta a {
@@ -1179,7 +1180,7 @@ a:hover {
 
 .m-icon,
 .m-close-icon {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #cac595;
   transition: transform 0.2s ease;
 }
@@ -1205,6 +1206,15 @@ a:hover {
   }
     .footer-menu ul {
       gap: 1rem;
+    }
+
+    .m-icon,
+    .m-close-icon {
+      font-size: 1.6rem;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
     }
 }
 
